@@ -1,0 +1,61 @@
+.btn{
+    border: 1px, solid transparent;
+    border-radius: 0.3em;
+    box-shadow: none;
+    padding: 1em;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.btn :hover{
+    opacity: 1.0;
+}
+
+.btn.small{
+    font-size: 0.7em;
+}
+
+.btn.big{
+    font-size:1.1em;
+}
+
+.btn.black{
+    background: #1A237E;
+    color: white;
+}
+.btn.green{
+    background: #4C4F50;
+    color: white;
+}
+
+.btn.sky{
+    background: #00BCD4;
+    color:white;
+}
+
+.btn.purple{
+    background: #673AB7;
+    color: white;
+}
+
+
+.btn.border{
+    background: transparent;
+    border-color: #1A237E 1px solid;
+    color:#1A237E;
+}
+
+.btn.border.btn.green{
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.btn.border.btn.sky{
+    border-color: #00BCD4;
+    color: #00BCD4;
+}
+
+.btn.border.purple{
+    border-color: #673AD7;
+    color: #673ad7;
+}
