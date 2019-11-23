@@ -1,0 +1,19 @@
+###
+GET http://localhost:3000/focos
+
+###
+GET http://localhost:3000/focos/1
+
+
+
+###
+POST http://localhost:3000/focos
+
+Content-Type: application/json
+
+{
+    "tipo": "LED",
+    "consumo": "40 Watts",
+    "eficacia": "iluminacion eficiente",
+    "marca": "Phillips"
+}

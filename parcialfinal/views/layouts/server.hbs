@@ -1,0 +1,76 @@
+<pre>
+    {{this}}
+</pre>
+<div class="container">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body">
+          <form action="/add" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="tipo" placeholder="tipo">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="consumo" placeholder="Consumo">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="eficacia" placeholder="Eficacia">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="marca" placeholder="marca">
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">
+                Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Tipo</th>
+            <th>consumo</th>
+            <th>Eficacia</th>
+            <th>Marca</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each task}}
+              <tr>
+          
+                <td><strong>{{ this.tipo}}</strong></td>
+                <td>{{ this.consumo}}</td>
+                <td>{{ this.eficacia}}</td>
+                <td>{{ this.marca}}</td>
+                <td>
+                  <a
+                    class="{{ this.status ? 'btn btn-success' : 'btn btn-dark'}}"
+                    href="/turn/{{ this._id }}">Done</a>
+                  <a href="/delete/{{ this._id }}"
+                    class="btn btn-danger">
+                    Delete
+                  </a>
+                  <a href="/edit/{{ this._id }}" class="btn btn-info">
+                    Edit
+                  </a>
+                </td>
+              </tr>
+            {{/each }}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
