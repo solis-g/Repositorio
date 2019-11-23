@@ -15,7 +15,8 @@ router.get('/', async (req, res ) => {  // si le pongo un async, await se tarda 
 
 // get 1
 router.get('/:id', getFoco, (req, res )=>{
-    res.send(res.focos)  
+    res.send(res.focos)
+    res.render('focos')  
 })
 
 //create
@@ -31,7 +32,7 @@ router.post('/', async(req, res )=>{
         res.status(201).json(newFoco)
     } catch(err){
         res.status(400).json({message: err.message})
-    }
+    } res.redirect('/foco')
 })
 
 //update
@@ -58,6 +59,7 @@ router.delete('/:id', getFoco, async(req, res )=>{
     }catch(err){
         res.status(500).json({message: err.message})
     }
+    res.redirect('/')
 })
 
 function getFoco(res, req, next){
