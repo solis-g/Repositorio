@@ -24,3 +24,11 @@ const focosRouter  = require('./routes/focos')
 app.use('/focos', focosRouter)
 
 app.listen (port, ()=> console.log(`SERVIDOR INICIALIZADO ${port}`))
+
+app.get('/', function(req, res){
+    res.send("Connect")
+})
+
+app.get('/focos', function(req,res){
+    res.render("focos")
+})
