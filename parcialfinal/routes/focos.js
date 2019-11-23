@@ -50,7 +50,15 @@ router.patch('/:id', (req, res )=>{
     }
 })
 
-
+//delet
+router.delete('/:id', getFoco, async(req, res )=>{
+    try{
+        await res.foco.remove()
+        res.json({message: "deleted"})
+    }catch(err){
+        res.status(500).json({message: err.message})
+    }
+})
 
 function getFoco(res, req, next){
     let foco
